@@ -1,4 +1,5 @@
 # 学习并认识多线程
+···Java
 public class SynchronizedDemo implements Runnable{
     int x = 100;
 
@@ -20,7 +21,7 @@ public class SynchronizedDemo implements Runnable{
         }
         x = 2000;
     }
-    public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException {
         SynchronizedDemo sd = new SynchronizedDemo();
         new Thread(()->sd.m1()).start();
         new Thread(()->sd.m2()).start();
@@ -32,14 +33,17 @@ public class SynchronizedDemo implements Runnable{
         m1();
     }
 }
+```
 程序一的执行结果如下：
-x=1000
+* x=1000
 Main x=2000
+<br>
 
-Main x=2000
+* Main x=2000
 x=1000
+<br>
 
-Main x=1000
+* Main x=1000
 x=1000
 
 
@@ -55,7 +59,8 @@ main线程与Thread2竞争同一实例方法m2的锁，如main先拿到进入代
 (2)如main刚释放完锁未打印，thread1刚执行完赋值，则Main x=1000
 
 因进入m1的线程TIME_WAITTING时间比m2的明显较久，再加上m2的锁可上升到重量级锁，不可能出现，m1打印x=2000的情况；
-
+<br>
+···Java
 public class SynchronizedDemo  {
    static Integer count=0;
    public static void incr(){
@@ -68,7 +73,7 @@ public class SynchronizedDemo  {
            count++;
        }
    }
-    public static void main(String[] args) throws IOException, InterruptedException {
+public static void main(String[] args) throws IOException, InterruptedException {
         for(int i=0;i<1000;i++){
             new Thread(()->SynchronizedDemo.incr()).start();
         }
@@ -76,18 +81,23 @@ public class SynchronizedDemo  {
         System.out.println("result:"+count);
     }
 }
+···
 
 程序二的执行结果取决于在主线程执行打印时，1000个线程的执行数；因为锁的是count对象，count++后是重新建一个Integer类型去赋值，锁的不是同一个对象无意义；
 
 # 第二节课作业
 1、请列出Happens-before的几种规则
-程序顺序规则，volatiole变量规则，传递性规则，start规则，join规则，监视器锁规则
+<br>
+>>程序顺序规则，volatiole变量规则，传递性规则，start规则，join规则，监视器锁规则
 
 2、volatile 能使得一个非原子操作变成原子操作吗？为什么？
-不能，volatile只能解决可见性及顺序一致性问题；
+<br>
+>>不能，volatile只能解决可见性及顺序一致性问题；
 
 3、哪些场景适合使用Volatile
-多线程间需要对共享变量具有可见性时。
+<br>
+>>多线程间需要对共享变量具有可见性时。
 
 4、如果对一个数组修饰volatile，是否能够保证数组元素的修改对其他线程的可见？为什么？
-不能，数组是对成员变量或对象一个地址引用，volatile可保证对于对象数组的地址具有可见性，但是数组或对象内部的成员变量不具有可见性。
+<br>
+>>不能，数组是对成员变量或对象一个地址引用，volatile可保证对于对象数组的地址具有可见性，但是数组或对象内部的成员变量不具有可见性。
