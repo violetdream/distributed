@@ -1,5 +1,5 @@
 # 学习并认识多线程
-···Java
+··· Java
 public class SynchronizedDemo implements Runnable{
     int x = 100;
 
@@ -60,7 +60,7 @@ main线程与Thread2竞争同一实例方法m2的锁，如main先拿到进入代
 
 因进入m1的线程TIME_WAITTING时间比m2的明显较久，再加上m2的锁可上升到重量级锁，不可能出现，m1打印x=2000的情况；
 <br>
-···Java
+··· Java
 public class SynchronizedDemo  {
    static Integer count=0;
    public static void incr(){
