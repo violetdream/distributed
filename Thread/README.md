@@ -1,5 +1,5 @@
 # 学习并认识多线程
-··· Java
+···java
 public class SynchronizedDemo implements Runnable{
     int x = 100;
 
@@ -60,7 +60,7 @@ main线程与Thread2竞争同一实例方法m2的锁，如main先拿到进入代
 
 因进入m1的线程TIME_WAITTING时间比m2的明显较久，再加上m2的锁可上升到重量级锁，不可能出现，m1打印x=2000的情况；
 <br>
-··· Java
+···java
 public class SynchronizedDemo  {
    static Integer count=0;
    public static void incr(){
@@ -101,3 +101,35 @@ public static void main(String[] args) throws IOException, InterruptedException 
 4、如果对一个数组修饰volatile，是否能够保证数组元素的修改对其他线程的可见？为什么？
 <br>
 >>不能，数组是对成员变量或对象一个地址引用，volatile可保证对于对象数组的地址具有可见性，但是数组或对象内部的成员变量不具有可见性。
+
+##Conditions
+Synchronized wait/notify/notifyAll
+condition  await/signal
+
+生产者、消费者
+wait/notify;   condition:await/signal
+
+##CountDownLatch
+使用场景：计数器
+await/countdown
+
+CountDownLatch会用到AQS的哪种锁？共享锁
+
+里面有getState()，state表示计数器，
+
+共享锁不需要竞争
+
+##Semaphore
+限流（AQS）
+permits 令牌（5）
+公平和非公平 
+semaphore.acquire()
+semaphore.release();
+
+state表示令牌数
+
+##CycliBarrier
+循环屏障
+可以使得一组线程达到一个同步点之前阻塞
+cyclicBarrier.await()
+
