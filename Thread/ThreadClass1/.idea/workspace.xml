@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6757816a-6068-4c7e-8c83-be4198fe085f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../~$$ReentrantReadWriteLock实现.~vsdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/personal/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/personal/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -12,34 +12,53 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/VolatileDemo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/CountDownLatchDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="459">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/ReentrantLockDemo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="-322">
+              <caret line="8" column="22" selection-end-line="34" />
+              <folding>
+                <element signature="e#243#244#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/SemaphoreDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="823">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,42 +67,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/concurrent/locks/ReentrantReadWriteLock.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/ParkQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="355" column="24" lean-forward="true" selection-start-line="355" selection-start-column="24" selection-end-line="355" selection-end-column="24" />
+            <state relative-caret-position="212">
+              <caret line="26" column="20" selection-end-line="55" />
               <folding>
-                <element signature="e#7757#7758#0" expanded="true" />
-                <element signature="e#7784#7785#0" expanded="true" />
-                <element signature="e#26818#26819#0" expanded="true" />
-                <element signature="e#26858#26859#0" expanded="true" />
-                <element signature="e#27298#27299#0" expanded="true" />
-                <element signature="e#27343#27344#0" expanded="true" />
-                <element signature="e#30177#30178#0" expanded="true" />
-                <element signature="e#30226#30227#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="960" column="41" selection-start-line="960" selection-start-column="28" selection-end-line="960" selection-end-column="41" />
-              <folding>
-                <element signature="e#44444#44445#0" expanded="true" />
-                <element signature="e#44501#44502#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/io/FileOutputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7479">
-              <caret line="301" column="24" selection-start-line="301" selection-start-column="24" selection-end-line="301" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -118,6 +108,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/personal/VolatileDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/personal/ReentrantLock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/personal/ReentrantLockDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/personal/CountDownLatchDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/personal/SemaphoreDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/personal/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/personal/ParkQueue.java" />
       </list>
     </option>
   </component>
@@ -134,6 +128,12 @@
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-36" />
@@ -188,8 +188,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,7 +216,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReentrantLockDemo">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.personal.App" />
+      <module name="ThreadClass1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.personal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountDownLatchDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.personal.CountDownLatchDemo" />
+      <module name="ThreadClass1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.personal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReentrantLockDemo" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.personal.ReentrantLockDemo" />
       <module name="ThreadClass1" />
@@ -231,8 +257,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SynchronizedDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.personal.SynchronizedDemo" />
+    <configuration name="SemaphoreDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.personal.SemaphoreDemo" />
       <module name="ThreadClass1" />
       <extension name="coverage">
         <pattern>
@@ -244,8 +270,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SynchronizedDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.personal.SynchronizedDemo2" />
+    <configuration name="SynchronizedDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.personal.SynchronizedDemo" />
       <module name="ThreadClass1" />
       <extension name="coverage">
         <pattern>
@@ -320,14 +346,18 @@
     <list>
       <item itemvalue="Application.ReentrantLockDemo" />
       <item itemvalue="Application.SynchronizedDemo" />
-      <item itemvalue="Application.SynchronizedDemo2" />
       <item itemvalue="Application.VolatileDemo" />
+      <item itemvalue="Application.CountDownLatchDemo" />
+      <item itemvalue="Application.SemaphoreDemo" />
+      <item itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.SemaphoreDemo" />
+        <item itemvalue="Application.CountDownLatchDemo" />
         <item itemvalue="Application.VolatileDemo" />
         <item itemvalue="Application.SynchronizedDemo" />
-        <item itemvalue="Application.SynchronizedDemo2" />
       </list>
     </recent_temporary>
   </component>
@@ -344,11 +374,12 @@
       <workItem from="1557804066774" duration="4274000" />
       <workItem from="1557835070301" duration="2213000" />
       <workItem from="1558008039785" duration="2886000" />
+      <workItem from="1558354613810" duration="4875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9373000" />
+    <option name="totallyTimeSpent" value="14248000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,8 +393,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983108" visible="true" weight="0.25641027" />
-      <window_info id="Structure" order="1" sideWeight="0.5016892" side_tool="true" visible="true" weight="0.25641027" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8209459" visible="true" weight="0.25716442" />
+      <window_info id="Structure" order="1" sideWeight="0.17905405" side_tool="true" visible="true" weight="0.25716442" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -371,7 +402,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293919" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4054054" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34797296" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39864865" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,9 +417,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3295626" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.3295626" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
@@ -432,42 +463,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7479">
-          <caret line="301" column="24" selection-start-line="301" selection-start-column="24" selection-end-line="301" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/VolatileDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state>
           <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="960" column="41" selection-start-line="960" selection-start-column="28" selection-end-line="960" selection-end-column="41" />
-          <folding>
-            <element signature="e#44444#44445#0" expanded="true" />
-            <element signature="e#44501#44502#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/concurrent/locks/ReentrantReadWriteLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="355" column="24" lean-forward="true" selection-start-line="355" selection-start-column="24" selection-end-line="355" selection-end-column="24" />
+        <state relative-caret-position="8559">
+          <caret line="355" column="24" selection-start-line="355" selection-start-column="24" selection-end-line="355" selection-end-column="24" />
           <folding>
             <element signature="e#7757#7758#0" expanded="true" />
             <element signature="e#7784#7785#0" expanded="true" />
@@ -481,12 +487,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24705">
+          <caret line="960" column="41" selection-start-line="960" selection-start-column="28" selection-end-line="960" selection-end-column="41" />
+          <folding>
+            <element signature="e#44444#44445#0" expanded="true" />
+            <element signature="e#44501#44502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/io/FileOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7479">
+          <caret line="301" column="24" selection-start-line="301" selection-start-column="24" selection-end-line="301" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/ReentrantLockDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/concurrent/CountDownLatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="289" column="16" selection-start-line="289" selection-start-column="16" selection-end-line="289" selection-end-column="16" />
+          <folding>
+            <element signature="e#9899#9900#0" expanded="true" />
+            <element signature="e#9936#9937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/CountDownLatchDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/ParkQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="26" column="20" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/SemaphoreDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/personal/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322">
+          <caret line="8" column="22" selection-end-line="34" />
+          <folding>
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
           </folding>
         </state>
       </provider>

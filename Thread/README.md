@@ -1,5 +1,5 @@
 # 学习并认识多线程
-···java
+``` java
 public class SynchronizedDemo implements Runnable{
     int x = 100;
 
@@ -60,7 +60,7 @@ main线程与Thread2竞争同一实例方法m2的锁，如main先拿到进入代
 
 因进入m1的线程TIME_WAITTING时间比m2的明显较久，再加上m2的锁可上升到重量级锁，不可能出现，m1打印x=2000的情况；
 <br>
-···java
+``` java
 public class SynchronizedDemo  {
    static Integer count=0;
    public static void incr(){
@@ -81,7 +81,7 @@ public static void main(String[] args) throws IOException, InterruptedException 
         System.out.println("result:"+count);
     }
 }
-···
+```
 
 程序二的执行结果取决于在主线程执行打印时，1000个线程的执行数；因为锁的是count对象，count++后是重新建一个Integer类型去赋值，锁的不是同一个对象无意义；
 
@@ -133,3 +133,20 @@ state表示令牌数
 可以使得一组线程达到一个同步点之前阻塞
 cyclicBarrier.await()
 
+## CurrentHashMap
+ConcurrentHashMap1.8中是基于什么机制来保证线程安全性的
+<br>
+基于Node数组+CAS原子操作占位符+Synchronized对链表头结点加锁
+
+ConcurrentHashMap通过get方法获取数据的时候，是否需要通过加锁来保证数据的可见性？为什么？
+<br>
+不需要，Node数组值通过Volatile的happens-before原则实现可见性
+
+ConcurrentHashMap1.7和ConcurrentHashMap1.8有哪些区别？
+<br>
+从Segment锁机制到用Synchronized对Node锁，减小锁粒度
+从数组+单向链表到数组+单向链表+红黑树结构
+
+ConcurrentHashMap1.8为什么要引入红黑树？
+<br>
+单向链表的查找时间复杂度为O(N),红黑树的查找时间复杂度为O(logN)
