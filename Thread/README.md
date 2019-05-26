@@ -102,14 +102,14 @@ public static void main(String[] args) throws IOException, InterruptedException 
 <br>
 >>不能，数组是对成员变量或对象一个地址引用，volatile可保证对于对象数组的地址具有可见性，但是数组或对象内部的成员变量不具有可见性。
 
-##Conditions
+## Conditions
 Synchronized wait/notify/notifyAll
 condition  await/signal
 
 生产者、消费者
 wait/notify;   condition:await/signal
 
-##CountDownLatch
+## CountDownLatch
 使用场景：计数器
 await/countdown
 
@@ -119,7 +119,7 @@ CountDownLatch会用到AQS的哪种锁？共享锁
 
 共享锁不需要竞争
 
-##Semaphore
+## Semaphore
 限流（AQS）
 permits 令牌（5）
 公平和非公平 
@@ -128,7 +128,7 @@ semaphore.release();
 
 state表示令牌数
 
-##CycliBarrier
+## CycliBarrier
 循环屏障
 可以使得一组线程达到一个同步点之前阻塞
 cyclicBarrier.await()
@@ -150,3 +150,84 @@ ConcurrentHashMap1.7和ConcurrentHashMap1.8有哪些区别？
 ConcurrentHashMap1.8为什么要引入红黑树？
 <br>
 单向链表的查找时间复杂度为O(N),红黑树的查找时间复杂度为O(logN)
+
+## 线程池
+JDK、Spring
+<br>
+Executors
+``` java
+		ExecutorService executorService= Executors.newFixedThreadPool(10);
+        executorService=Executors.newCachedThreadPool();
+        executorService=Executors.newSingleThreadExecutor();
+        executorService=Executors.newScheduledThreadPool();
+        executorService=Executors.newWorkStealingPool();
+```
+## ThreadPoolExecutor
+new ThreadPoolExecutor(nThreads,核心线程数
+							nThreads,最大线程数
+						  0L,超时时间
+						  TimeUnit.MILLISECONDS,超时时间的单位
+						  new LinkedBlockingQueue<Runnable>()  阻塞队列
+						  ThreadFactory threadFactory, 线程的工厂
+                          RejectedExecutionHandler handler); 拒绝策略
+						  
+keepaliveTime怎么去监控线程进行回收？
+
+<br>
+1、不建议直接用Executors创建线程
+<br>
+2、线程池大小的设置；取决于硬件环境和软件环境
+CPU的核心数；线程的执行情况（IO密集型（CPU时间片的切换）CPU核心数的２倍，CPU密集型（CPU利用率非常高，以CPU核心数为准 设置最大线程数为CPU核心数+1））
+（线程等待的时间＋线程CPU时间）／线程CPU时间×CPU核心数
+<br>
+
+worker的独占不支持重入
+1、lock 表示正在执行任务，不应该被中断
+2、shutdown的时候，w.trylock()
+
+<br>
+拒绝策略
+AbortPolicy
+DiscardPolicy
+DiscardOldestPolicy
+CallerRunsPolicy
+
+为什么要使用线程池？
+通过用线程池解决在JVM里创建太多线程处理请求时，可能会使系统由于过度消耗内存或切换过度而导致系统资源不足的问题。
+Executors提供的四种线程池:newSingleThreadExecutor,newFixedThreadPool,newCachedThreadPool,newScheduledThreadPool ，请说出他们的区别以及应用场景
+newSingleThreadExecutor核心线程数及最大线程数都为1，适用于根据FIFO优先级任务执行的场景。
+newFixedThreadPool核心线程数及最大线程数是指定值，适用于指定线程数的场景。
+newCachedThreadPool创建一个可缓存线程池，空闲线程只有60s，超过后就会回收，适于处理请求时间较短的场景。 
+newScheduledThreadPool创建一个可以指定线程数量的线程池，且带有延时和周期性执行任务的功能；
+
+线程池有哪几种工作队列？
+ArrayBlockingQueue 基于数组的先进先出队列
+LinkedBlockingQueue基于链表的先进先出队列
+SynchronousQueue 同步队列
+
+线程池默认的拒绝策略有哪些
+AbortPolicy 直接抛出异常
+CallerRunsPolicy 
+DiscardOldestPolicy 丢弃阻塞队列中靠前的任务
+DiscardPolicy 直接丢弃任务
+
+如何理解有界队列和无界队列
+设定了固定大小的队列为有界队列；未设定固定大小的队列为无界队列；
+
+线程池是如何实现线程回收的？ 以及核心线程能不能被回收？
+当线程池中的核心线程数大于最大线程数时，会被回收；
+工作线程回收条件有下面三个
+a、参数allowCoreThreadTimeOut为true；
+B、该线程在keepAliveTime时间内获取不到任务，即空闲这么长时间；
+C、当前线程池大小 > 核心线程池大小corePoolSize。
+核心线程也能被回收（allowCoreThreadTimeOut为true时）。
+FutureTask是什么
+FutureTask是Runnable和Future的结合，既可以执行任务又能保存结果。
+Thread.sleep(0)的作用是什么
+Thread.Sleep(0) 是你的线程暂时放弃cpu，也就是释放一些未用的时间片给其他线程或进程使用，就相当于一个让位动作
+
+如果提交任务时，线程池队列已满，这时会发生什么
+判断当前线程数是否小于最大线程数，如果小于则创建新的工作线程来执行该任务；如果当前线程数大于，则执行拒绝策略。
+
+如果一个线程池中还有任务没有执行完成，这个时候是否允许被外部中断？
+可以通过shutdownnow方法来中断线程的执行
